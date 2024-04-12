@@ -41,3 +41,4 @@ eureka:
     preferIpAddress: true
 jwt:
   secret: vuanhhuy12312234
+  time-out: 10000

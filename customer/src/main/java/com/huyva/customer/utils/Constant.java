@@ -28,6 +28,12 @@ public interface Constant {
 
     }
 
+    class JWT_DATA{
+       public static String JWT_ACTION = "action";
+
+        String JWT_ACTION_LOGIN_VALUE = "LOGIN";
+    }
+
 
 
 
