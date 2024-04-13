@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.4</version>
+        <version>3.2.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.huyva</groupId>
@@ -17,7 +17,7 @@
     <properties>
         <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <release.train.version>2022.0.4</release.train.version>
+        <release.train.version>2023.0.0</release.train.version>
     </properties>
 
     <modules>
@@ -108,23 +108,23 @@
             <version>3.1.11</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>net.devh</groupId>-->
-<!--            <artifactId>grpc-spring-boot-starter</artifactId>-->
-<!--            <version>3.0.0.RELEASE</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-spring-boot-starter</artifactId>
+            <version>3.0.0.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.0.0-jre</version>
+        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
