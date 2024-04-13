@@ -1,4 +1,4 @@
-package com.huyva.customer.utils;
+package com.huyva.base.utils;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;

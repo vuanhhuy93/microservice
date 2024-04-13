@@ -18,7 +18,7 @@ public class CustomerDomain {
     }
 
     public Customer getCustomerByUserName(String userName) {
-        log.info("querty to Db find customer with username {}", userName);
+        log.info("query to Db find customer with username {}", userName);
 
         Customer customer = customerRepository.findFirstByUsernameOrderByCreatedAtDesc(userName);
 

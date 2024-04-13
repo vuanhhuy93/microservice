@@ -17,7 +17,7 @@
     <properties>
         <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <release.train.version>2023.0.1</release.train.version>
+        <release.train.version>2022.0.4</release.train.version>
     </properties>
 
     <modules>
@@ -25,6 +25,7 @@
         <module>card-service</module>
         <module>customer</module>
         <module>order</module>
+        <module>base</module>
     </modules>
     <dependencies>
 
@@ -38,6 +39,7 @@
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
             </exclusions>
+
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-log4j2 -->
@@ -106,12 +108,11 @@
             <version>3.1.11</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/net.devh/grpc-spring-boot-starter -->
-        <dependency>
-            <groupId>net.devh</groupId>
-            <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>3.0.0.RELEASE</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.devh</groupId>-->
+<!--            <artifactId>grpc-spring-boot-starter</artifactId>-->
+<!--            <version>3.0.0.RELEASE</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>

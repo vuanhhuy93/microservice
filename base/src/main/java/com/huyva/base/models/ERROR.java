@@ -1,4 +1,4 @@
-package com.huyva.customer.models;
+package com.huyva.base.models;
 
 import org.springframework.http.HttpStatus;
 
@@ -17,13 +17,11 @@ public enum ERROR {
     USER_BLOCKED(103, "Tài khoản đã bị khóa , vui lòng liên hệ với quản trị viên!"),
     PASSWORD_FAIL(104, "Mật khẩu không đúng!"),
     USER_NOT_MAP(105, "Thông tin người dùng chưa có trên hệ thống. Vui lòng đăng ký tài khoản!"),
-    USER_LOCKED(106, "Tài khoản đã bị khóa , vui lòng liên hệ với quản trị viên!"),
-    BUSINESS_LOCKED(107, "Tài khoản đã bị khóa , vui lòng liên hệ với quản trị viên!"),
+    USER_LOCKED(106, "Tài khoản đã bị chặn đăng nhập có thời hạn , vui lòng liên hệ với quản trị viên!"),
+
     USER_NOT_EXISTED(108, "Thông tin tài khoản không tồn tại"),
-    USER_HAVE_NOT_BUSINESS(109, "Tài khoản chưa có thông tin doanh nghiệp"),
     TAX_CODE_HAS_REGISTER(110, "Thông tin Mã số thuế của doanh nghiệp đã được đăng kí"),
     TOKEN_INVALID(112, "Token không hợp lệ hoặc đã hết hạn"),
-    USER_NOT_GRANT_BUSINESS(113, "Tài khoản này chưa được gán với một doanh nghiệp , xin vui lòng đăng ký để được sử dụng dịch vụ!"),
     USER_BLOCK_LOGIN(114, "Tài khoản này đang bị khóa vì nhập quá số lần sai mật khẩu , xin vui lòng đăng nhập lại sau : "),
 
 

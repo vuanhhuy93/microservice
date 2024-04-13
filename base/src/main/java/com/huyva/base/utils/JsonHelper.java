@@ -1,4 +1,4 @@
-package com.huyva.customer.utils;
+package com.huyva.base.utils;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

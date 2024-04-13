@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.huyva</groupId>
     <artifactId>service-discovery</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>service-discovery</name>
     <description>service-discovery</description>
     <properties>
@@ -42,6 +42,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>service-discovery</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

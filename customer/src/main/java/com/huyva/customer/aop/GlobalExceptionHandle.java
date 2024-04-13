@@ -1,8 +1,9 @@
 package com.huyva.customer.aop;
 
-import com.huyva.customer.models.ApiException;
-import com.huyva.customer.models.ERROR;
-import com.huyva.customer.models.response.BaseResponse;
+
+import com.huyva.base.models.ApiException;
+import com.huyva.base.models.BaseResponse;
+import com.huyva.base.models.ERROR;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.huyva.customer.utils;
+package com.huyva.base.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;

@@ -1,4 +1,4 @@
-package com.huyva.customer.utils;
+package com.huyva.base.utils;
 
 public interface RESPONSE_CODE {
     class GRPC {

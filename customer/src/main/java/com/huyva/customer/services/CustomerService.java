@@ -1,13 +1,15 @@
 package com.huyva.customer.services;
 
+import com.huyva.base.models.ApiException;
+import com.huyva.base.models.BaseResponse;
+import com.huyva.base.models.ERROR;
+import com.huyva.base.utils.Constant;
+import com.huyva.base.utils.ValidationUtils;
 import com.huyva.customer.database.entities.Customer;
 import com.huyva.customer.domains.CustomerDomain;
-import com.huyva.customer.models.ApiException;
-import com.huyva.customer.models.ERROR;
+
 import com.huyva.customer.models.request.register.RegisterRequest;
-import com.huyva.customer.models.response.BaseResponse;
-import com.huyva.customer.utils.Constant;
-import com.huyva.customer.utils.ValidationUtils;
+
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
@@ -25,13 +27,13 @@ public class CustomerService {
     public CustomerService(CustomerDomain customerDomain){
         this.customerDomain = customerDomain;
     }
-    public BaseResponse registerCustomer(RegisterRequest request) throws ApiException{
+    public BaseResponse registerCustomer(RegisterRequest request) throws ApiException {
 
         log.info("registerCustomer with username {} START" , request.getPhoneNumber());
         // step 1: validate request
         this.validateRegisterRequest(request);
 
-        String phoneNumber = com.huyva.customer.utils.StringUtils.formatPhoneNumber(request.getPhoneNumber());
+        String phoneNumber = com.huyva.base.utils.StringUtils.formatPhoneNumber(request.getPhoneNumber());
         // step 2: check existed customer
 
         Customer customer = this.customerDomain.getCustomerByUserName(phoneNumber);

@@ -1,20 +1,21 @@
-package com.huyva.customer.models.response;
+package com.huyva.base.models;
 
 
 
-import com.huyva.customer.models.ERROR;
+import com.huyva.base.models.*;
 import lombok.Data;
 
 
 @Data
-public class BaseResponse {
+public class BaseResponse<T> {
     
 
     private int code;
  
 
     private String message;
-    
+
+    private T data;
     public BaseResponse() {
         this.code = 1;
         this.message = "SUCCESS";

@@ -1,7 +1,10 @@
-package com.huyva.customer.models.response;
+package com.huyva.customer.controllers;
 
-import com.huyva.customer.models.ApiException;
+
+import com.huyva.base.models.ApiException;
+import com.huyva.base.models.BaseResponse;
 import com.huyva.customer.models.request.register.RegisterRequest;
+
 import com.huyva.customer.services.CustomerService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

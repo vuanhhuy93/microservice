@@ -1,4 +1,4 @@
-package com.huyva.customer.models;
+package com.huyva.base.models;
 
 import lombok.Data;
 import org.springframework.http.HttpStatus;
