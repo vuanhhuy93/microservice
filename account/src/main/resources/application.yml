@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: payment
+  datasource:
+    url: jdbc:postgresql://103.70.12.96:5432/payment
+    password: 123@123a
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 25
+      minimum-idle: 5
+      idle-timeout: 600000
+      max-lifetime: 1800000
+    jpa:
+      generate-ddl: false
+      hibernate.ddl-auto: none
+      open-in-view: false
+      show-sql: false
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: true
+          jdbc.batch_size: 1000
+          order_inserts: true
+    cloud:
+      compatibility-verifier:
+        enabled: false
+  redis:
+    mode: single
+    config-file: E:\\HuyVAProject\\microservice\\config\\redisson.yaml

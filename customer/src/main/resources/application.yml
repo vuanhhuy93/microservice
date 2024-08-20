@@ -37,12 +37,6 @@ spring:
 redis:
   mode: single
   config-file: E:\\HuyVAProject\\microservice\\config\\redisson.yaml
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://192.168.5.59:8761/eureka}
-  instance:
-    preferIpAddress: true
 jwt:
   secret: vuanhhuy12312234
   time-out: 100000000

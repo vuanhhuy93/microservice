@@ -29,7 +29,7 @@
         <module>base</module>
         <module>grpc-interface</module>
     </modules>
-    <dependencyManagement>
+<!--    <dependencyManagement>-->
         <dependencies>
 
             <dependency>
@@ -117,24 +117,24 @@
             </dependency>
 
 
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-stub</artifactId>
-                <version>${grpc-stub.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-protobuf</artifactId>
-                <version>${grpc-stub.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.protobuf</groupId>
-                <artifactId>protobuf-java-util</artifactId>
-                <version>${protobuf-java.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>io.grpc</groupId>-->
+<!--                <artifactId>grpc-stub</artifactId>-->
+<!--                <version>${grpc-stub.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.grpc</groupId>-->
+<!--                <artifactId>grpc-protobuf</artifactId>-->
+<!--                <version>${grpc-stub.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.google.protobuf</groupId>-->
+<!--                <artifactId>protobuf-java-util</artifactId>-->
+<!--                <version>${protobuf-java.version}</version>-->
+<!--            </dependency>-->
         </dependencies>
 
-    </dependencyManagement>
+<!--    </dependencyManagement>-->
 
     <build>
         <plugins>
