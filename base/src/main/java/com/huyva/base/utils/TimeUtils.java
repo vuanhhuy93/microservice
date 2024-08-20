@@ -2,8 +2,7 @@ package com.huyva.base.utils;
 
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -14,7 +13,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class TimeUtils {
-    public static Logger logger = LogManager.getLogger(TimeUtils.class);
+
     public static final String DATE_FORMAT = "dd/MM/yyyy HH:mm:ss";
     public static final String CMS_DATE_FORMAT = "dd/MM/yyyy";
     public static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT);
@@ -47,7 +46,7 @@ public class TimeUtils {
             Date date = NUMBER_FORMAT.parse(dateTime);
 
 
-           return EXCEL_FORMAT.format(date);
+            return EXCEL_FORMAT.format(date);
 
         } catch (Exception e){
             return null;
@@ -136,7 +135,7 @@ public class TimeUtils {
             return SIMPLE_DATE_FORMAT.format(date);
 
         } catch (Exception e) {
-            logger.error(e);
+
 
         }
         return null;
@@ -148,7 +147,7 @@ public class TimeUtils {
             return CMS_SIMPLE_DATE_FORMAT.parse(source);
 
         } catch (Exception e) {
-            logger.error(e);
+
 
         }
         return null;
@@ -160,7 +159,7 @@ public class TimeUtils {
             return LocalDate.parse(source, DATE_FORMATTER);
 
         } catch (Exception e) {
-            logger.error(e);
+           e.printStackTrace();
         }
         return null;
     }
@@ -170,7 +169,7 @@ public class TimeUtils {
         try {
             return DATE_FORMATTER.format(source);
         } catch (Exception e) {
-            logger.error(e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -181,7 +180,7 @@ public class TimeUtils {
             return CMS_SIMPLE_DATE_FORMAT.format(date);
 
         } catch (Exception e) {
-            logger.error(e);
+            e.printStackTrace();
 
         }
         return null;
@@ -193,7 +192,7 @@ public class TimeUtils {
         try {
             return SIMPLE_DATE_FORMAT.parse(date);
         } catch (Exception e) {
-            logger.error(e);
+            e.printStackTrace();
         }
         return null;
 
@@ -321,7 +320,7 @@ public class TimeUtils {
             Date date = new Date(milliseconds);
             return SIMPLE_DATE_FORMAT.format(date);
         } catch (Exception e) {
-            logger.error(e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -357,16 +356,16 @@ public class TimeUtils {
         return result;
     }
 
-	public static Date convertStringToDate(String s, String pattern) {
-		if (StringUtils.isBlank(s)) {
-    		return null;
-		}
-		Date date = null;
-		try {
-			date = new SimpleDateFormat(pattern).parse(s);
-		} catch (Exception e) {
-			logger.error("Có lỗi khi parse date: {}: Message: {}", date, e.getMessage());
-		}
-		return date;
-	}
+    public static Date convertStringToDate(String s, String pattern) {
+        if (StringUtils.isBlank(s)) {
+            return null;
+        }
+        Date date = null;
+        try {
+            date = new SimpleDateFormat(pattern).parse(s);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
 }
