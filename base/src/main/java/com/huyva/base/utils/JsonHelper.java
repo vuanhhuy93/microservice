@@ -6,13 +6,10 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class JsonHelper {
-
     private static final ObjectMapper mapper = new ObjectMapper();
 
     static {
@@ -87,18 +84,4 @@ public class JsonHelper {
         }
     }
 
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<String>();
-        list.add("thangnm 1");
-        list.add("thangnm 2");
-        list.add("thangnm 3");
-        list.add("thangnm 4");
-        list.add("thangnm 5");
-
-        try {
-            System.out.println(toString(list));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

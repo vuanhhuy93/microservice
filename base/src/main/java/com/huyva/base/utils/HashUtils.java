@@ -18,7 +18,4 @@ public class HashUtils {
     public static Long decode(String value){
         return hashids.decode(value)[0];
     }
-
-
-
 }

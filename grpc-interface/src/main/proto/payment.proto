@@ -1,0 +1,86 @@
+syntax = "proto3";
+
+package payment;
+option java_multiple_files = true;
+option java_package = "com.huyva.account.payment";
+option java_outer_classname = "WalletGrpc";
+import "base.proto";
+
+service WalletService{
+    rpc createWallet(CreateWallet) returns (CreateWalletResponse);
+    rpc fundIn(FundIn) returns (GetWalletInfoResponse);
+    rpc createTransaction(CreateTransaction) returns (UpdateTransactionResponse);
+    rpc getWallet(GetWallet) returns (GetWalletInfoResponse);
+    rpc updateTransaction(UpdateTransaction) returns (UpdateTransactionResponse);
+}
+
+message GrpcResult {
+    string message = 1;
+    int32 code = 2;
+}
+
+
+
+message CreateWallet{
+    int64 userId = 1;
+    string currency = 2;
+    double balance = 3;
+}
+
+message CreateWalletResponse{
+    base.GrpcResult result = 1;
+    WalletInfo walletInfo = 2;
+}
+
+message FundIn{
+    int64 userId = 1;
+    string currency = 2;
+    double amount = 3;
+}
+
+message FundInResponse{
+    base.GrpcResult result = 1;
+    WalletInfo walletInfo = 2;
+}
+
+message CreateTransaction{
+    int64 walletId = 1;
+    string currency = 2;
+    double amount = 3;
+    int64 orderId = 4;
+}
+
+message GetWallet{
+    int64 userId = 1;
+}
+
+message GetWalletInfoResponse{
+    base.GrpcResult result = 1;
+    WalletInfo walletInfo = 2;
+}
+message WalletInfo{
+    int64 walletId = 1;
+    double balance = 2;
+    double activeAmount = 3;
+    string currency = 4;
+    string reserveAmount = 5;
+}
+message UpdateTransaction{
+    int64 walletId = 1;
+    int64 transactionId = 2;
+    int64 status = 3;
+}
+
+message UpdateTransactionResponse{
+    base.GrpcResult result = 1;
+    TransactionInfo transactionInfo = 2;
+}
+
+message TransactionInfo{
+    int64 transactionId = 1;
+    int64 walletId = 2;
+    double amount = 3;
+    string currency = 4;
+    int64 orderId = 5;
+    string status = 6;
+}
